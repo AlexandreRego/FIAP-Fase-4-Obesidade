@@ -10,7 +10,7 @@ from sklearn.preprocessing import StandardScaler, OneHotEncoder
 from sklearn.ensemble import RandomForestClassifier
 
 
-st.set_page_config(page_title="Previsor de Obesidade", layout="wide")
+st.set_page_config(page_title="Análise | Previsão Obesidade", layout="wide")
 # ======= Treinamento do Modelo (Pipeline completo) =======
 @st.cache_resource
 def treinar_pipeline():
