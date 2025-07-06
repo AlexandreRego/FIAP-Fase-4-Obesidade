@@ -9,6 +9,8 @@ from sklearn.compose import ColumnTransformer
 from sklearn.preprocessing import StandardScaler, OneHotEncoder
 from sklearn.ensemble import RandomForestClassifier
 
+
+st.set_page_config(page_title="Previsor de Obesidade", layout="wide")
 # ======= Treinamento do Modelo (Pipeline completo) =======
 @st.cache_resource
 def treinar_pipeline():
@@ -42,7 +44,7 @@ modelo_pipeline = treinar_pipeline()
 joblib.dump(modelo_pipeline, "random_forest_obesity_model.pkl")
 
 # ======= Interface do App =======
-st.set_page_config(page_title="Previsor de Obesidade", layout="wide")
+
 st.title("🩺 Sistema Preditivo e Analítico de Obesidade")
 
 st.markdown("Preencha os dados abaixo para obter uma previsão do nível de obesidade.")
