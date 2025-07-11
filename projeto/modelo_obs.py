@@ -120,11 +120,7 @@ with col_img:
 st.markdown("---")
 
 # 3 MENU STREAMLIT DASHBOARD
-
-st.sidebar.markdown("---")
-if st.sidebar.button("🚀 Treinar Modelo com CSV do GitHub"):
-    train_and_save_artifacts()
-    
+ 
 opcoes_genero = {"Male": "Masculino", "Female": "Feminino"}
 opcoes_sim_nao = {'yes': "Sim", 'no': "Não"}
 opcoes_caec_calc = {'no': "Não", 'Sometimes': "De vez em quando", 'Frequently': "Com frequência", 'Always': "Diariamente"}
@@ -166,6 +162,10 @@ with st.sidebar.form("formulario_previsao"):
 
     st.markdown("---")
     botao_submeter = st.form_submit_button("✨ Gerar Previsão")
+
+st.sidebar.markdown("---")
+if st.sidebar.button("🚀 Treinar Modelo com CSV do GitHub"):
+    train_and_save_artifacts()
 
 # 4 VISUALIZAÇÃO DO DASHBOARD
 modelo, preprocessor = load_artifacts()
