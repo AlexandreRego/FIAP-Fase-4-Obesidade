@@ -105,15 +105,16 @@ def load_raw_data():
 st.title("Dashboard de Análise de Risco de Obesidade")
 
 _, col_img, _ = st.columns([1, 4, 1])
-if os.path.exists("projeto/tabela-imc_202108231741.png"):
-    with col_img:
-        st.image(
-            "tabela-imc_202108231741.png",
-            caption="Tabela de Classificação do Índice de Massa Corporal (IMC)",
-            use_container_width=True
-        )
-else:
-     st.warning("Imagem do cabeçalho não encontrada. Crie a pasta 'assets' e coloque a imagem nela.")
+caminho_imagem = os.path.join("projeto", "tabela-imc_202108231741.png")
+
+# O uso de os.path.join torna o código mais robusto entre diferentes sistemas operacionais.
+
+with col_img:
+    st.image(
+        caminho_imagem,
+        caption="Tabela de Classificação do Índice de Massa Corporal (IMC)",
+        use_container_width=True
+    )
 
 st.markdown("---")
 
