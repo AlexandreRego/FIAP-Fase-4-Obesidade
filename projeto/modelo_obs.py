@@ -62,7 +62,7 @@ def train_and_save_artifacts():
         preprocessor = ColumnTransformer(
             transformers=[
                 ("num", StandardScaler(), numeric_features),
-                ("cat", OneHotEncoder(handle_unknown='ignore', sparse=False), categorical_features)
+                ("cat", OneHotEncoder(handle_unknown='ignore', sparse_output=False), categorical_features)
             ],
             remainder='passthrough'
         )
