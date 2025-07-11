@@ -24,7 +24,7 @@ st.set_page_config(
 # --- Constantes ---
 MODEL_FILENAME = "modelo_rf.pkl"
 PREPROCESSOR_FILENAME = "preprocessor.pkl"
-DATA_PATH = "Obesity.csv"
+DATA_PATH = "https://raw.githubusercontent.com/AlexandreRego/FIAP-Fase-4-Obesidade/refs/heads/main/projeto/Obesity.csv"
 numeric_features = ['Age', 'Height', 'Weight', 'FCVC', 'NCP', 'CH2O', 'FAF', 'TUE']
 categorical_features = ['Gender', 'family_history', 'FAVC', 'CAEC', 'SMOKE', 'SCC', 'CALC', 'MTRANS']
 
@@ -105,10 +105,10 @@ def load_raw_data():
 st.title("Dashboard de Análise de Risco de Obesidade")
 
 _, col_img, _ = st.columns([1, 4, 1])
-if os.path.exists("tabela-imc_202108231741.PNG"):
+if os.path.exists("projeto"):
     with col_img:
         st.image(
-            "tabela-imc_202108231741.PNG",
+            "tabela-imc_202108231741.png",
             caption="Tabela de Classificação do Índice de Massa Corporal (IMC)",
             use_container_width=True
         )
