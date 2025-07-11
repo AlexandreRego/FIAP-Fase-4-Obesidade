@@ -102,22 +102,22 @@ def load_raw_data():
         st.warning(f"Arquivo de dados '{DATA_PATH}' não encontrado. Os gráficos analíticos não serão exibidos.")
         return None
     
-# --- CABEÇALHO DA PÁGINA PRINCIPAL ---
-# st.title("Dashboard de Análise de Risco de Obesidade")
+ # --- CABEÇALHO DA PÁGINA PRINCIPAL ---
+st.title("Dashboard de Análise de Risco de Obesidade")
 
-# _, col_img, _ = st.columns([1, 4, 1])
-# caminho_imagem = os.path.join("projeto", "tabela-imc_202108231741.png")
+_, col_img, _ = st.columns([1, 4, 1])
+caminho_imagem = os.path.join("projeto", "tabela-imc_202108231741.png")
 
 # # O uso de os.path.join torna o código mais robusto entre diferentes sistemas operacionais.
 
-# with col_img:
-#     st.image(
-#         caminho_imagem,
-#         caption="Tabela de Classificação do Índice de Massa Corporal (IMC)",
-#         use_container_width=True
-#     )
+with col_img:
+    st.image(
+        caminho_imagem,
+        caption="Tabela de Classificação do Índice de Massa Corporal (IMC)",
+        use_container_width=True
+    )
 
-# st.markdown("---")
+st.markdown("---")
 
 # 3 MENU STREAMLIT DASHBOARD
 opcoes_genero = {"Male": "Masculino", "Female": "Feminino"}
