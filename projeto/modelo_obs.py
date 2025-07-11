@@ -98,8 +98,8 @@ def load_raw_data():
     try:
         dados = pd.read_csv(DATA_PATH)
         return dados
-    except FileNotFoundError:
-        st.warning(f"Arquivo de dados '{DATA_PATH}' não encontrado. Os gráficos analíticos não serão exibidos.")
+    except Exception as e:
+        st.error(f"Erro ao carregar dados: {e}")
         return None
     
  # --- CABEÇALHO DA PÁGINA PRINCIPAL ---
