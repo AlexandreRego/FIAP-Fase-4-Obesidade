@@ -19,14 +19,12 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
-SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
-PROJETO_DIR = os.path.join(SCRIPT_DIR)
 
 # 2 FUNÇÕES, CONSTANTES E INICIALIZAÇÃO
 
 # --- Constantes ---
-MODEL_FILENAME = os.path.join(PROJETO_DIR, "modelo_rf.pkl")
-PREPROCESSOR_FILENAME = os.path.join(PROJETO_DIR, "preprocessor.pkl")
+MODEL_FILENAME = os.path.join("projeto", "modelo_rf.pkl")
+PREPROCESSOR_FILENAME = os.path.join("projeto", "preprocessor.pkl")
 DATA_PATH = os.path.join(PROJETO_DIR, "Obesity.csv")
 numeric_features = ['Age', 'Height', 'Weight', 'FCVC', 'NCP', 'CH2O', 'FAF', 'TUE']
 categorical_features = ['Gender', 'family_history', 'FAVC', 'CAEC', 'SMOKE', 'SCC', 'CALC', 'MTRANS']
@@ -105,21 +103,21 @@ def load_raw_data():
         return None
     
 # --- CABEÇALHO DA PÁGINA PRINCIPAL ---
-st.title("Dashboard de Análise de Risco de Obesidade")
+# st.title("Dashboard de Análise de Risco de Obesidade")
 
-_, col_img, _ = st.columns([1, 4, 1])
-caminho_imagem = os.path.join(PROJETO_DIR, "tabela-imc_202108231741.png")
+# _, col_img, _ = st.columns([1, 4, 1])
+# caminho_imagem = os.path.join("projeto", "tabela-imc_202108231741.png")
 
-# O uso de os.path.join torna o código mais robusto entre diferentes sistemas operacionais.
+# # O uso de os.path.join torna o código mais robusto entre diferentes sistemas operacionais.
 
-with col_img:
-    st.image(
-        caminho_imagem,
-        caption="Tabela de Classificação do Índice de Massa Corporal (IMC)",
-        use_container_width=True
-    )
+# with col_img:
+#     st.image(
+#         caminho_imagem,
+#         caption="Tabela de Classificação do Índice de Massa Corporal (IMC)",
+#         use_container_width=True
+#     )
 
-st.markdown("---")
+# st.markdown("---")
 
 # 3 MENU STREAMLIT DASHBOARD
 opcoes_genero = {"Male": "Masculino", "Female": "Feminino"}
