@@ -24,7 +24,7 @@ st.set_page_config(
 # --- Constantes ---
 MODEL_FILENAME = "modelo_rf.pkl"
 PREPROCESSOR_FILENAME = "preprocessor.pkl"
-DATA_PATH = os.path.join("projeto", "Obesity.csv")
+DATA_PATH = "projeto/Obesity.csv"
 numeric_features = ['Age', 'Height', 'Weight', 'FCVC', 'NCP', 'CH2O', 'FAF', 'TUE']
 categorical_features = ['Gender', 'family_history', 'FAVC', 'CAEC', 'SMOKE', 'SCC', 'CALC', 'MTRANS']
 
