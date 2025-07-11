@@ -105,7 +105,7 @@ def load_raw_data():
 st.title("Dashboard de Análise de Risco de Obesidade")
 
 _, col_img, _ = st.columns([1, 4, 1])
-if os.path.exists("projeto"):
+if os.path.exists("projeto/tabela-imc_202108231741.png"):
     with col_img:
         st.image(
             "tabela-imc_202108231741.png",
